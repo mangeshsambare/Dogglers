@@ -28,20 +28,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- TODO: Note that this list item will be used in a grid view which requires a
-                different layout because the list will have two columns of cards.
-                This means that the information within the card must stack the vertically
-                since there is less room in terms of width.-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bella"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TODO: Create an ImageView resource for the image of the dog.
-               The height should be 194dp
-               The width should match the with of the card
-               The scaleType should be set to centerCrop-->
+        <TextView
+            android:id="@+id/txt_dog_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dog Name"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <!-- TODO: Create a TextView for each of the following:
-                The dog's name
-                The dog's age
-                The dog's hobbies-->
+        <TextView
+            android:id="@+id/txt_dog_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dog_name" />
+
+        <TextView
+            android:id="@+id/txt_dog_hobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dog_age" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
